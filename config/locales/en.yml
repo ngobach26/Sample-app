@@ -31,13 +31,33 @@
 
 en:
   base_title: Ruby on Rails Tutorial Sample App
+  auth:
+    sign_up: Sign up
+    log_in: Log In
   static_pages:
     home:
-      title_html: <h1>Sample App</h1>
-      p_html: <p>This is the home page for the <a href='https://www.railstutorial.org/'> Ruby on Rails Tutorial</a> sample application.</p>
+      name: Home
+      welcome: Welcome to Our Sample app
+      content: Discover the best features and services we offer.
+      sign_up: Sign up Now!
+    contact:
+      name: Contact
+      title_html: <h1>Contact</h1>
+      p_html: <p>Contact the Ruby on Rails Tutorial about the sample app at the <a href='https://www.railstutorial.org/contact'>contact page</a>.</p>
     help:
+      name: Help
       title_html: <h1>Help</h1>
       p_html: <p>Get help on the Ruby on Rails Tutorial at the <a href='https://www.railstutorial.org/help'> Rails Tutorial Help page</a>. To get help on this sample app, see the <a href='https://www.railstutorial.org/book'><em>Ruby on Rails Tutorial</em>book</a>.</p>
     about:
+      name: About  
       title_html: <h1>About</h1>
       p_html: <p>Get help on the Ruby on Rails Tutorial at the <a href='https://www.railstutorial.org/help'> Rails Tutorial Help page</a>. To get help on this sample app, see the <a href='https://www.railstutorial.org/book'><em>Ruby on Rails Tutorial</em>book</a>.</p>
+  layouts:
+    footer:
+      copy_right: 2024 Sample App. All Rights Reserved.
+    nav_bar:
+      home: Home
+      contact: Contact
+      help: Help
+      about: About
+
