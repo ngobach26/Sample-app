@@ -33,7 +33,8 @@ en:
   base_title: Ruby on Rails Tutorial Sample App
   auth:
     sign_up: Sign up
-    log_in: Log In
+    log_in: Log in
+    log_out: Log out
   static_pages:
     home:
       name: Home
@@ -60,4 +61,5 @@ en:
       contact: Contact
       help: Help
       about: About
+      user: User
 

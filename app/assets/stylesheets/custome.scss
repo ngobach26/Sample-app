@@ -8,6 +8,14 @@
   font-weight: bold;
 }
 
+.btn {
+  margin: 0 5px 0 5px;
+}
+
+.btn1 {
+  margin: 10px
+}
+
 .hero p {
   font-size: 1.25rem;
 }
@@ -20,4 +28,43 @@
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+.alert {
+  display: block;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  margin-bottom: 30px;
+}
+
+.form-footer {
+  margin-top: 30px;
+}
+
+.cancel-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cancel-button {
+  margin-top: 15px;
+}
+
+.back-link {
+  margin-top: 20px;
+  display: inline-block;
 }

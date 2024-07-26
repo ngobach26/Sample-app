@@ -1,5 +1,8 @@
+<div>
 <% flash.each do |name, msg| %>
-  <span>
+  <span class="alert alert-<%= message_case name %>">
     <%= msg %>
   </span>
 <% end %>
+</div>
+
