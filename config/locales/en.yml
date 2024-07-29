@@ -57,9 +57,13 @@ en:
     footer:
       copy_right: 2024 Sample App. All Rights Reserved.
     nav_bar:
+      setting: Setting
       home: Home
       contact: Contact
       help: Help
       about: About
       user: User
+      language: language
+      japanese: Japanese
+      english:  English
 
