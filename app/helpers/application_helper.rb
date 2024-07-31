@@ -14,6 +14,8 @@ module ApplicationHelper
       :warning
     when 'alert'
       :danger
+    else
+      key
     end
   end
 end
