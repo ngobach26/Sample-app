@@ -19,14 +19,12 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'puma', '5.6.4'
 gem 'rails', '7.0.4'
-gem 'rails_admin'
 gem 'rails-i18n'
 gem 'sassc-rails'
 gem 'sprockets-rails', '3.4.2'
 gem 'stimulus-rails', '1.0.4'
 gem 'turbo-rails', '1.1.1'
 gem 'will_paginate', '3.3.1'
-gem 'cssbundling-rails'
 
 group :development, :test do
   gem 'debug', '1.5.0', platforms: %i[mri mingw x64_mingw]
@@ -56,5 +54,5 @@ end
 # on a native Windows system:
 # gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
+gem 'cssbundling-rails'
 gem 'devise', '~> 4.9'
-gem "cssbundling-rails"
