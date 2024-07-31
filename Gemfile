@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -20,6 +22,7 @@ gem 'omniauth-rails_csrf_protection'
 gem 'puma', '5.6.4'
 gem 'rails', '7.0.4'
 gem 'rails-i18n'
+gem 'rubocop', '~> 1.65', require: false
 gem 'sassc-rails'
 gem 'sprockets-rails', '3.4.2'
 gem 'stimulus-rails', '1.0.4'

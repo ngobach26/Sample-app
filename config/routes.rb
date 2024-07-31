@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users, only: :omniauth_callbacks, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   scope '(:locale)', locale: /en|ja/ do
@@ -7,6 +9,6 @@ Rails.application.routes.draw do
     get 'static_pages/about'
     get 'static_pages/contact'
     root 'static_pages#home'
-    resources :users, only: [:index, :show, :destroy]
+    resources :users, only: %i[index show destroy]
   end
 end
