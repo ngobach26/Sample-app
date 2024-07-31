@@ -22,6 +22,8 @@ gem "puma",                       "5.6.4"
 gem "bootsnap",                   "1.12.0", require: false
 gem "mysql2", "~> 0.5"
 gem "dotenv", groups: [:development, :test]
+gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem "debug",   "1.5.0", platforms: %i[ mri mingw x64_mingw ]
