@@ -1,0 +1,37 @@
+ja:
+  base_title: Ruby on Rails チュートリアル サンプルアプリ
+  auth:
+    sign_up: サインアップ
+    log_in: ログイン
+    log_out: ログアウト
+  static_pages:
+    home:
+      name: ホーム
+      welcome: サンプルアプリへようこそ
+      content: 提供する最高の機能とサービスをご覧ください。
+      sign_up: 今すぐサインアップ！
+    contact:
+      name: お問い合わせ
+      title_html: <h1>お問い合わせ</h1>
+      p_html: <p>サンプルアプリに関するお問い合わせは、<a href='https://www.railstutorial.org/contact'>お問い合わせページ</a>をご覧ください。</p>
+    help:
+      name: ヘルプ
+      title_html: <h1>ヘルプ</h1>
+      p_html: <p>Ruby on Rails チュートリアルのヘルプは、<a href='https://www.railstutorial.org/help'>Rails Tutorial Helpページ</a>をご覧ください。このサンプルアプリに関するヘルプは、<a href='https://www.railstutorial.org/book'><em>Ruby on Rails Tutorial</em>の本</a>をご覧ください。</p>
+    about:
+      name: アバウト
+      title_html: <h1>アバウト</h1>
+      p_html: <p>Ruby on Rails チュートリアルのヘルプは、<a href='https://www.railstutorial.org/help'>Rails Tutorial Helpページ</a>をご覧ください。このサンプルアプリに関するヘルプは、<a href='https://www.railstutorial.org/book'><em>Ruby on Rails Tutorial</em>の本</a>をご覧ください。</p>
+  layouts:
+    footer:
+      copy_right: 2024 サンプルアプリ. 全著作権所有.
+    nav_bar:
+      setting: 設定
+      home: ホーム
+      contact: お問い合わせ
+      help: ヘルプ
+      about: アバウト
+      user: ユーザー
+      language: 言語
+      japanese: 日本語
+      english:  英語

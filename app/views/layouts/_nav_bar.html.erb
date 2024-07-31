@@ -16,10 +16,25 @@
           <%= link_to t(".contact") , static_pages_contact_path , class: "nav-link active"%>
         </li>
       </ul>
-      <form class="">
-        <%= link_to t("auth.log_in") , "#" , class: "btn btn-outline-primary mr-2" %>
-        <%= link_to t("auth.sign_up") , "#" , class: "btn btn-outline-success" %>
-      </form>
+      <% if !user_signed_in? %>
+        <%= link_to t("auth.log_in") , new_user_session_path , class: "btn btn-outline-primary mr-2" %>
+        <%= link_to t("auth.sign_up") , new_user_registration_path , class: "btn btn-outline-success" %>
+      <% else %>
+        <%= render "layouts/signed_in" %>
+      <% end %>
+      <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= t(".language") %>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+          <li>
+            <%= link_to t(".japanese"), locale: "ja" %>
+          </li>
+          <li>
+            <%= link_to t(".english"), locale: "en" %>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

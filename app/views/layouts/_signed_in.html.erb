@@ -1,0 +1,11 @@
+<div class="dropdown">
+  <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+    <%= t("layouts.nav_bar.setting") %>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+    <li><%= link_to t("layouts.nav_bar.user") , edit_user_registration_path , class: "dropdown-item active"%></li>
+    <li>
+      <%= link_to t("auth.log_out") , destroy_user_session_path , class:"dropdown-item" , data: { "turbo-method": :delete } %>
+    </li>
+  </ul>
+</div>
