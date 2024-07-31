@@ -72,3 +72,39 @@ body {
 .alert.alert-danger {
   margin-bottom: 20px;
 }
+
+.profile-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  background-color: #007bff;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.profile-body {
+  padding: 20px;
+}
+
+.profile-label {
+  font-weight: bold;
+}
+
+.profile-text {
+  font-size: 1.1em;
+}
+
+.edit-button {
+  margin-top: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
