@@ -1,18 +1,18 @@
 module ApplicationHelper
-  def full_title(title = "")
-    base_title = I18n.t "base_title"
+  def full_title(title = '')
+    base_title = I18n.t 'base_title'
     title.blank? ? base_title : "#{title} | #{base_title}"
   end
 
   def message_case(key)
     case key
-    when "notice"
+    when 'notice'
       :success
-    when "info"
+    when 'info'
       :info
-    when "warn"
+    when 'warn'
       :warning
-    when "alert"
+    when 'alert'
       :danger
     end
   end
