@@ -2,15 +2,19 @@ class UsersController < ApplicationController
   before_action :user_signed_in?
   before_action :admin_user, only: :destroy
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page], per_page: 10)
+    if @user.nil?
+      redirect_to users_path, alert: "User not found"
+    end
   end
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 8)
+    @users = User.paginate(page: params[:page], per_page: 10)
   end
 
   def destroy
-    User.find(params[:id]).destroy
+    User.find_by(id: params[:id]).destroy
     flash[:success] = 'User deleted'
     redirect_to users_path, status: :see_other
   end

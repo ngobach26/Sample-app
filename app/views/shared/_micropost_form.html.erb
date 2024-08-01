@@ -1,0 +1,21 @@
+<% if !current_user.admin? %>
+  <div class="col-md-4">
+    <%= form_with model: @micropost do |f| %>
+      <%= render 'shared/error_messages', resource: f.object %>
+      <div class='field'>
+        <%= f.text_area :content, placeholder: 'Compose new micropost...' %>
+      </div>
+      <%= f.submit 'Post', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="col-md-4">
+    <%= form_with model: User do |f| %>
+      <%= render 'shared/error_messages', resource: f.object %>
+      <div class='field'>
+        <%= f.text_area :content, placeholder: 'Compose new micropost...' %>
+      </div>
+      <%= f.submit 'Post', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+<% end %>

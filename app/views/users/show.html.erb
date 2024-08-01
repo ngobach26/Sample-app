@@ -1,28 +1,14 @@
+<% provide(:title, @user.name) %>
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <div class="card profile-card">
-        <div class="card-header profile-header text-center">
-          <h3>Profile</h3>
-        </div>
-        <div class="card-body profile-body">
-          <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label profile-label">Name:</label>
-            <div class="col-sm-9">
-              <p class="form-control-plaintext profile-text"><%= @user.name %></p>
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label profile-label">Email:</label>
-            <div class="col-sm-9">
-              <p class="form-control-plaintext profile-text"><%= @user.email %></p>
-            </div>
-          </div>
-          <div class="text-center edit-button">
-            <a href="<%#= edit_user_path(@user) %>" class="btn btn-primary">Edit Profile</a>
-          </div>
-        </div>
-      </div>
+    <aside class='col-md-4'>
+      <section class='user_info'>
+        <%= render 'shared/user_info' %>
+      </section>
+    </aside>
+    <div class='col-md-8'>
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/microposts' %>
     </div>
   </div>
 </div>

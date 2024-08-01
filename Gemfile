@@ -25,6 +25,7 @@ gem 'sprockets-rails', '3.4.2'
 gem 'stimulus-rails', '1.0.4'
 gem 'turbo-rails', '1.1.1'
 gem 'will_paginate', '3.3.1'
+gem 'activerecord-import'
 
 group :development, :test do
   gem 'debug', '1.5.0', platforms: %i[mri mingw x64_mingw]

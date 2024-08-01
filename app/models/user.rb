@@ -3,6 +3,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
   has_many :microposts, dependent: :destroy
   enum role: { user: 'user', admin: 'admin' }
+  accepts_nested_attributes_for :microposts
+
 
   def self.from_omniauth(access_token)
     data = access_token.info
