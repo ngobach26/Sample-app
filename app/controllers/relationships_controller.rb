@@ -8,7 +8,10 @@ class RelationshipsController < ApplicationController
     else
       flash[:alert] = 'Unable to follow user.'
     end
-    redirect_to @user
+    respond_to do |format|
+      format.html { redirect_to @user }
+      format.turbo_stream
+    end
   end
 
   def destroy
@@ -17,7 +20,10 @@ class RelationshipsController < ApplicationController
     else
       flash[:alert] = 'Unable to unfollow user.'
     end
-    redirect_to @user, status: :see_other
+    respond_to do |format|
+      format.html { redirect_to @user }
+      format.turbo_stream
+   end
   end
 
   private
