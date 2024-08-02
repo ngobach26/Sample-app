@@ -23,7 +23,6 @@
 .footer {
   background: #343a40;
   color: #fff;
-  padding: 5px 0;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -36,6 +35,10 @@
 
 body {
   background-color: #f8f9fa;
+}
+
+.container {
+  padding-bottom: 15px;
 }
 
 .form-container {
@@ -72,3 +75,96 @@ body {
 .alert.alert-danger {
   margin-bottom: 20px;
 }
+
+.profile-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  background-color: #007bff;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.profile-body {
+  padding: 20px;
+}
+
+.profile-label {
+  font-weight: bold;
+}
+
+.profile-text {
+  font-size: 1.1em;
+}
+
+.edit-button {
+  margin-top: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pagination a,
+.pagination em {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.pagination a:hover {
+  background-color: #e9ecef;
+  color: #0056b3;
+}
+
+.pagination em {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.pagination a.previous_page,
+.pagination a.next_page {
+  font-weight: bold;
+}
+
+.pagination a.previous_page:hover,
+.pagination a.next_page:hover {
+  background-color: #e9ecef;
+}
+
+.pagination a:disabled {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.pagination .current {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  pointer-events: none;
+}
+

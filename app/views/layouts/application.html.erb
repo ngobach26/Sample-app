@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
     <%= render "layouts/shim" %>
     <%= javascript_importmap_tags %>
   </head>
   <body>
     <%= render "layouts/nav_bar" %>
     <div class="container">
+      <%#= turbo_frame_tag "flash" %>
       <%= render "layouts/messages" %>
       <%= yield %>
-      <%= render "layouts/footer" %>
     </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>

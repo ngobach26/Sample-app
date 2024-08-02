@@ -1,0 +1,31 @@
+<% provide(:title, @title) %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <h3 class="mb-4 text-center"><%= @title %></h3>
+      <% if @users.any? %>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <% @users.each do |user| %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span>
+                    <%= user.name %> <%= user.email %>
+                  </span>
+                  <%= link_to "delete", "#", method: :delete, class: "btn btn-danger btn-sm" %>
+                </li>
+              <% end %>
+            </ul>
+            <div class="d-flex justify-content-center mt-3">
+              <%= will_paginate @users, class: "pagination pagination-sm" %>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="alert alert-info text-center" role="alert">
+          No users found.
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

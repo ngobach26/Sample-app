@@ -1,0 +1,12 @@
+<tr>
+  <td><%= user.id %></td>
+  <td><%= link_to user.name, user %></td>
+  <td><%= user.email %></td>
+  <td><%= user.role %></td>
+  <td>
+    <% if current_user.admin? %>
+      <%= link_to 'delete', user, data: { 'turbo-method': :delete,
+                                          turbo_confirm: 'You sure?' }, class: 'btn btn-danger btn-sm' %>
+    <% end %>
+  </td>
+</tr>

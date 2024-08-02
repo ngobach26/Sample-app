@@ -3,7 +3,12 @@
     <%= t("layouts.nav_bar.setting") %>
   </button>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-    <li><%= link_to t("layouts.nav_bar.user") , edit_user_registration_path , class: "dropdown-item active"%></li>
+    <li>
+      <%= link_to t("layouts.nav_bar.user") , edit_user_registration_path , class: "dropdown-item active"%>
+    </li>
+    <li>
+      <%= link_to t("Profile") , current_user , class:"dropdown-item"  %>
+    </li>
     <li>
       <%= link_to t("auth.log_out") , destroy_user_session_path , class:"dropdown-item" , data: { "turbo-method": :delete } %>
     </li>
