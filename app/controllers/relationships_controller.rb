@@ -16,14 +16,14 @@ class RelationshipsController < ApplicationController
 
   def destroy
     if current_user.unfollow(@user)
-      flash[:success] = "You have unfollowed #{@user.name}."
+      flash.now[:success] = "You have unfollowed #{@user.name}."
     else
-      flash[:alert] = 'Unable to unfollow user.'
+      flash.now[:alert] = 'Unable to unfollow user.'
     end
     respond_to do |format|
       format.html { redirect_to @user }
       format.turbo_stream
-   end
+    end
   end
 
   private
@@ -31,15 +31,15 @@ class RelationshipsController < ApplicationController
   def set_user
     @user = User.find(params[:followed_id])
   rescue ActiveRecord::RecordNotFound
-    flash[:alert] = 'User not found.'
+    flash.now[:alert] = 'User not found.'
     redirect_to root_path
   end
 
   def set_relationship
-    @relationship = Relationship.find(params[:id])
-    @user = @relationship.followed
+    relationship = Relationship.find(params[:id])
+    @user = relationship.followed
   rescue ActiveRecord::RecordNotFound
-    flash[:alert] = 'Relationship not found.'
+    flash.now[:alert] = 'Relationship not found.'
     redirect_to root_path
   end
 end

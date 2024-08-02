@@ -1,6 +1,10 @@
 <%= turbo_stream.update 'follow_form' do %>
-  <%= render 'users/unfollow' %>
+  <%= render partial: 'users/unfollow', locals: { user: @user } %>
 <% end %>
 <%= turbo_stream.update 'followers' do %>
-  <%= @user.followers.count%>
+  <%= @user.followers.count %>
 <% end %>
+<%#= turbo_stream.update 'flash' do %>
+  <%#= render 'layouts/flash' %>
+<%# end %>
+<!---->
