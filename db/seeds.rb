@@ -18,9 +18,9 @@ users = []
   name = Faker::Name.name
   email = "user-#{n + 1}@gmail.com"
   password = '123123'
-  users << User.new(name: name,
-                    email: email,
-                    password: password,
+  users << User.new(name:,
+                    email:,
+                    password:,
                     password_confirmation: password)
 end
 
@@ -35,10 +35,16 @@ microposts = []
 50.times do
   content = Faker::Lorem.sentence(word_count: 5)
   users.each do |user|
-    microposts << Micropost.new(content: content, user_id: user.id)
+    microposts << Micropost.new(content:, user_id: user.id)
   end
 end
 
 # Import microposts in batches
 Micropost.import microposts, batch_size: 50, validate: false
 
+users = User.all
+user = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
