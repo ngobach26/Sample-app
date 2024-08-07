@@ -1,0 +1,40 @@
+# Log files and directories
+/log/*
+/tmp/*
+
+# Node modules directory (if using Node.js)
+node_modules/
+
+# Public assets directory (if not required for Docker build)
+public/assets
+
+# Ruby-related files and directories (if using Ruby)
+.bundle
+*.gem
+
+# Build artifacts (common in many projects)
+build/
+dist/
+*.log
+
+# IDE and editor configuration files
+.vscode/
+.idea/
+.ruby-lsp
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Git-related files
+.git
+.gitignore
+
+# Docker-related files (if present)
+Dockerfile
+docker-compose.yml
+
+#other files
+.rspec
