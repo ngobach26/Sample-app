@@ -3,10 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
+gem 'activerecord-import'
 gem 'active_storage_validations', '0.9.8'
-gem 'bcrypt',                     '3.1.18'
-gem 'bootsnap',                   '1.12.0', require: false
-gem 'bootstrap',                  '~> 5.3.0'
+gem 'bcrypt', '3.1.18'
+gem 'bootsnap', '1.12.0', require: false
+gem 'bootstrap', '~> 5.3.0'
 gem 'cancancan'
 gem 'devise-i18n'
 gem 'dotenv', groups: %i[development test]
@@ -25,7 +26,7 @@ gem 'sprockets-rails', '3.4.2'
 gem 'stimulus-rails', '1.0.4'
 gem 'turbo-rails', '1.1.1'
 gem 'will_paginate', '3.3.1'
-gem 'activerecord-import'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'debug', '1.5.0', platforms: %i[mri mingw x64_mingw]

@@ -35,3 +35,6 @@ Thumbs.db
 # Docker-related files (if present)
 Dockerfile
 docker-compose.yml
+
+#other files
+.rspec

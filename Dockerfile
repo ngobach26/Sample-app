@@ -1,5 +1,4 @@
 FROM ruby:3.1.2
-
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
 RUN apt-get update -qq && \
